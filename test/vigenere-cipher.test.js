@@ -83,6 +83,7 @@ describe('Vigenere cipher', () => {
     it.optional('double-sided reverse cryptography 2', () => {
       for (let i = 2; i < 200; i += 1) {
         const testStr = createTestString(i);
+        console.log(testStr);
         const reversedTestStr = testStr.split('').reverse().join('');
         const testKey = createTestKey(i - i % 2);
         const encrypted = reverseMachine.encrypt(reversedTestStr, testKey);
